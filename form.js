@@ -122,7 +122,7 @@ function signUp() {
             localStorage.loggedUser = JSON.stringify(login);
             messageContainer.innerHTML = "";
             messageContainer.innerHTML = `<img src="https://gojira.its.maine.edu/confluence/download/attachments/110633072/image2020-10-15_11-10-5.png?version=1&modificationDate=1602774607170&api=v2">
-                                      <a href="/index.html" class="navbar-anchor">HOME</a>`;
+                                      <a href="/home.html" class="navbar-anchor">HOME</a>`;
           });
       } else {
         alert("Sign up unsuccessful");
