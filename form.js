@@ -67,7 +67,7 @@ function findUser() {
           .getElementsByClassName("tab-body")[1];
         messageContainer.innerHTML = "";
         messageContainer.innerHTML = `<img src="https://i.stack.imgur.com/gqKFh.png">
-                                  <a href="/index.html" class="navbar-anchor">HOME</a>`;
+                                  <a href="/home.html" class="navbar-anchor">HOME</a>`;
       } else {
         alert("user was not found");
       }
