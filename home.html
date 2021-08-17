@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habituate Bookstore</title>
+    <script
+      src="https://kit.fontawesome.com/cce18f0ce0.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styling.css" />
+    <link rel="stylesheet" href="/navbar.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="navbar-links">
+        <li class="navbar-link">
+          <a href="/home.html" class="navbar-anchor">HOME</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/index.html" class="navbar-anchor">LOG IN/SIGN UP</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/profile.html" class="navbar-anchor">Profile</a>
+        </li>
+        <li class="navbar-link">
+          <a href="/html/services.html" class="navbar-anchor"></a>
+        </li>
+      </ul>
+      <button class="navbar-button" onclick="toggleNavbar()">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <h1>WELCOME TO HABITUATE READING BOOKSTORE</h1>
+      <!-- <div class="button-container">
+        <button onclick="filterBooks()">filter</button>
+      </div> -->
+      <div class="search_items">
+        <input
+          onkeyup="filterBooks()"
+          type="text"
+          class="form-control"
+          id="filter"
+          placeholder="Search Books by title..."
+        />
+      </div>
+      <div class="btn">
+        <img src="/SGN_02_12_2021_1613097851778.png" />
+      </div>
+    </div>
+    <div class="section">
+      <div class="order_details">
+        <div class="table_order">
+          <div class="details">
+            <h2>Customer name & Order ID</h2>
+            <i class="fas fa-plus-circle" onclick="addBooks()"></i>
+          </div>
+
+          <table>
+            <tr>
+              <th style="width: 500px">Book Title</th>
+              <th style="width: 80px">Price</th>
+              <th style="width: 80px">Quantity</th>
+            </tr>
+          </table>
+          <form id="form_add" onsubmit="return false">
+            <input class="readonly" type="text" placeholder="isbn" />
+            <input type="text" placeholder="Book title" />
+            <input type="text" placeholder="Author" />
+            <input type="text" placeholder="Genre" />
+            <input type="text" placeholder="price" />
+            <input type="text" placeholder="reviews" />
+            <input type="text" placeholder="image" />
+            <input type="submit" onclick="getValues()" value="submit" />
+          </form>
+
+          <table id="table_info">
+            <tr>
+              <td style="width: 500px"></td>
+              <td style="width: 80px"></td>
+              <td style="width: 80px"></td>
+            </tr>
+          </table>
+        </div>
+        <div class="add_img">
+          <i class="fas fa-cart-plus"></i>
+        </div>
+
+        <div class="cost_details">
+          <h1>TOTAL PRICE: R0.00</h1>
+        </div>
+        <div class="order_btn">
+          <button onclick="cancelOrder()">Clear Order</button>
+          <button onclick="sendOrder()">Send Order</button>
+        </div>
+        <hr />
+        <div class="btn_functions">
+          <button onclick="addBooks()">ADD BOOK</button>
+          <button onclick="updateBook()">UPDATE BOOK</button>
+          <button onclick="deleteBook()">DELETE BOOK</button>
+        </div>
+      </div>
+      <div class="books_container"></div>
+    </div>
+    <script src="/dynamic.js"></script>
+  </body>
+</html>
